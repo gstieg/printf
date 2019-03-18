@@ -1,6 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 #include <stdarg.h>
+#include <stdlib.h>
 
 /**
  * struct print - struct
@@ -17,10 +18,10 @@ typedef struct print
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-
 int p_char(va_list arg);
 int p_str(va_list arg);
 int p_dec(va_list arg);
 int p_int(va_list arg);
+int print_digit(int num, int *count);
 
-#endif
+#endif /* __HOLBERTON_H__ */
