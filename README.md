@@ -1,6 +1,6 @@
-**_printf**
+# **_printf**
 
-# _printf -  is a fucntion/command used in the C language to produce an output according to the specific output. 
+ _printf -  is a fucntion/command used in the C language to produce an output according to the specific output. 
 
 ## Symbols or flags for _printf
 
