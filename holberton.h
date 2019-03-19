@@ -4,24 +4,24 @@
 #include <stdlib.h>
 
 /**
- * struct print - struct
+ * struct specifier
  *
- * @print: prints the struct
+ * @s: Format specifiers
  *
- * @f: print the fucntion
+ * @function_ptr: Functions that will execute depending on specifier
  */
-typedef struct print
+typedef struct specifier
 {
-	char *print;
-	int (*f)();
-} print_t;
+	char s;
+	void (*function_ptr)();
+} specifier_t;
 
-int _printf(const char *format, ...);
-int _putchar(char c);
-int p_char(va_list arg);
-int p_str(va_list arg);
-int p_dec(va_list arg);
-int p_int(va_list arg);
+void _printf(const char *format, ...);
+void _putchar(char c);
+void print_char(va_list arg);
+void print_string(va_list arg);
+void print_dec(va_list arg);
+void print_int(va_list arg);
 int print_digit(int num, int *count);
 
 #endif /* __HOLBERTON_H__ */
