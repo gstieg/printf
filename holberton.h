@@ -17,11 +17,11 @@ typedef struct specifier
 } specifier_t;
 
 int _printf(const char *format, ...);
-void _putchar(char c);
-void print_char(va_list arg);
-void print_string(va_list arg);
-void print_dec(va_list arg);
-void print_int(va_list arg);
+int _putchar(char c);
+int print_char(va_list arg);
+int print_string(va_list arg);
+int print_dec(va_list arg);
+int print_int(va_list arg);
 int print_digit(int num, int *count);
 
 #endif /* __HOLBERTON_H__ */
