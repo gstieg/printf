@@ -13,7 +13,7 @@ int p_char(va_list arg)
 {
 	char c;
 
-	c = var_arg(arg, int);
+	c = va_arg(arg, int);
 
 	_putchar(c);
 
@@ -63,7 +63,7 @@ int p_dec(va_list arg)
 	int exp = 1;
 	int i = 1;
 
-	n - n / 10;
+	n = n / 10;
 	num = n;
 
 	if (last < 0)
@@ -84,9 +84,9 @@ int p_dec(va_list arg)
 		num = n;
 		while (exp > 0)
 		{
-			dig = sum / exp;
+			dig = num / exp;
 			_putchar(dig + '0');
-			num - num - (dig * exp);
+			num = num - (dig * exp);
 			exp = exp / 10;
 			i++;
 		}
@@ -107,7 +107,7 @@ int p_int(va_list arg)
 {
 	int n = va_arg(arg, int);
 	int num;
-	int last = n % 1-;
+	int last = n % 10;
 	int dig;
 	int exp = 1;
 	int i = 1;
