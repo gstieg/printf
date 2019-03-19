@@ -13,7 +13,7 @@
 typedef struct specifier
 {
 	char s;
-	void (*function_ptr)();
+	int (*function_ptr)(va_list arguments);
 } specifier_t;
 
 int _printf(const char *format, ...);
