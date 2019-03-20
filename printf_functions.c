@@ -34,5 +34,5 @@ int print_string(va_list arguments)
 		_putchar(a[i]);
 		i++;
 	}
-	return(i);
+	return (i);
 }
