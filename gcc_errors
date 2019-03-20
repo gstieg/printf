@@ -1,0 +1,21 @@
+vagrant@vagrant-ubuntu-trusty-64:~/printf$ e main.c
+vagrant@vagrant-ubuntu-trusty-64:~/printf$ gcc -Wall -Werror -Wextra -pedantic *.c
+main.c: In function ‘main’:
+main.c:13:6: error: variable ‘len2’ set but not used [-Werror=unused-but-set-variable]
+  int len2;
+      ^
+main.c:12:6: error: variable ‘len’ set but not used [-Werror=unused-but-set-variable]
+  int len;
+      ^
+cc1: all warnings being treated as errors
+printf_test.c: In function ‘_printf’:
+printf_test.c:24:20: error: expected ‘)’ before ‘ptr’
+    count += (int (*ptr)(va_list arguments));
+                    ^
+printf_test.c:24:24: error: expected ‘)’ before ‘(’ token
+    count += (int (*ptr)(va_list arguments));
+                        ^
+printf_test.c:15:8: error: variable ‘ptr’ set but not used [-Werror=unused-but-set-variable]
+  int (*ptr)(va_list arguments);
+        ^
+cc1: all warnings being treated as errors
