@@ -23,5 +23,6 @@ int print_string(va_list arg);
 int print_dec(va_list arg);
 int print_int(va_list arg);
 int print_digit(int num, int *count);
+int (*get_op_func(char s))(va_list arguments);
 
 #endif /* __HOLBERTON_H__ */
