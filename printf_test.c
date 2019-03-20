@@ -21,7 +21,8 @@ int _printf(const char *format, ...)
 		if(format[i] == '%')
 		{
 			ptr = get_op_func(format[i + 1]);
-			count += (*ptr)(va_list arguments);
+			count += ptr(arguments);
+
 			i++;
 		}
 		_putchar(format[i]);
