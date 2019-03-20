@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	va_start(arguments, format);
 	while (format && format[i] != '\0')
 	{
-		if(format[i] == '%')
+		if (format[i] == '%')
 		{
 			ptr = get_op_func(format[i + 1]);
 			count += ptr(arguments);
