@@ -15,7 +15,7 @@ int (*get_op_func(char s))(va_list arguments)
 	{'c', print_char},
 	{'s', print_string},
 	{'%', print_percent},
-	{'NULL', NULL}
+	{NULL, NULL}
 	};
 	int i;
 
