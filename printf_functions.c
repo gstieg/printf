@@ -28,7 +28,7 @@ int print_string(va_list arguments)
 	a = va_arg(arguments, char *);
 	i = 0;
 	if (a == NULL)
-                a = "(null)";
+		a = "(null)";
 	while(a[i] != '\0')
 	{
 		_putchar(a[i]);
