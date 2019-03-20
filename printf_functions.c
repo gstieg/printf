@@ -29,7 +29,7 @@ int print_string(va_list arguments)
 	i = 0;
 	if (a == NULL)
 		a = "(null)";
-	while(a[i] != '\0')
+	while (a[i] != '\0')
 	{
 		_putchar(a[i]);
 		i++;
