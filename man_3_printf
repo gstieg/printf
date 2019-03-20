@@ -1,4 +1,4 @@
-.TH Man Page for _printf
+.TH 03-19-19
 .SH NAME
 _printf is a fucntion/command used in the C language to produce an output according to the specific output.
 .SH SYNOPSIS
@@ -22,7 +22,7 @@ The '%' has no argument
 .B d,i
 int arguments are converted
 .SH RETURN
-If the statement runs correctly(success) thne the function returns the specific number of chars printed
+If the statement runs correctly(success) then the function returns the specific number of chars printed
 printf(3)
 .SH AUTHOR(S)
-Grayson Stiegler, Alia Vang, Brendan Eliason
+Grayson Stiegler (682@holbertonschool.com), Alia Vang(714@holbetonschool.com), Brendan Eliason(678@holbertonschool.com)
