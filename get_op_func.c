@@ -17,6 +17,12 @@ int (*get_op_func(char s))(va_list arguments)
 	{'%', print_percent},
 	{NULL, NULL}
 	};
+
+	va_start(arg, format);
+
+	if ( format == NULL || (format[0] == '%' && format [1] == '/0'))
+		return (0);
+
 	int i;
 
 	i = 0;
