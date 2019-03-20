@@ -1,0 +1,28 @@
+.TH Man Page for _printf
+.SH NAME
+_printf is a fucntion/command used in the C language to produce an output according to the specific output.
+.SH SYNOPSIS
+#include "holberton.h"
+.br \fIint\fR
+.br
+.B printf (\fIconst\fR \fIchar\fR \fI*format\fR, \fI...\fR);
+.SH DESCRIPTION
+_printf produces output according to the specific format.
+.SH DESCRIPTION 2.0
+.TP
+.BR c
+int is an argument and is changed to a unsigned char
+.TP
+.B s
+char * is an argument that is expected as a pointer and or array
+.TP
+.B %
+The '%' has no argument
+.TP
+.B d,i
+int arguments are converted
+.SH RETURN
+If the statement runs correctly(success) thne the function returns the specific number of chars printed
+printf(3)
+.SH AUTHOR(S)
+Grayson Stiegler, Alia Vang, Brendan Eliason
