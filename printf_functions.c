@@ -1,21 +1,12 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <stdarg.h>
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+#include "holberton.h"
 
 /**
  * print_char - a function that prints a character
- *@arguments: Passed from print_all
+ * @arguments: Passed from _printf
+ *
+ * Return: Count
  */
 
 int print_char(va_list arguments)
@@ -25,14 +16,16 @@ int print_char(va_list arguments)
 
 /**
  * print_string - a function that prints a string
- *@arguments: Passed from print_all
+ * @arguments: Passed from _printf
+ *
+ * Return: Count
  */
 int print_string(va_list arguments)
 {
 	unsigned int i;
 	char *a;
 
-	a = va_arg(arguments, char*);
+	a = va_arg(arguments, char *);
 	i = 0;
         if (a == NULL)
                 a = "(null)";
