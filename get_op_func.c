@@ -15,13 +15,8 @@ int (*get_op_func(char s))(va_list arguments)
 	{'c', print_char},
 	{'s', print_string},
 	{'%', print_percent},
-	{NULL, NULL}
+	{'0', NULL}
 	};
-
-	va_start(arg, format);
-
-	if ( format == NULL || (format[0] == '%' && format [1] == '/0'))
-		return (0);
 
 	int i;
 
