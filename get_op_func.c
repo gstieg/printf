@@ -14,7 +14,7 @@ int (*get_op_func(char s))(va_list arguments)
 	specifier_t specifier_array[] = {
 	{'c', print_char},
 	{'s', print_string},
-	{'0', NULL}
+	{'\0', NULL}
 	};
 
 	int i;
