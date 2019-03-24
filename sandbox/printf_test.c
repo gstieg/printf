@@ -4,24 +4,29 @@
 
 /**
  * _printf - A function that prints strings, followed by a new line
- * @format: String input
+ * @format: Input string describing what to print.  Everything inside this
+ *                string is printed verbatim except for the % conversions.
  *
- * Return: Nothing.
+ * Return: The number of characters printed.
  */
 int _printf(const char *format, ...)
 {
 	int i = 0;
 	int count = 0;
-	int (*ptr)(va_list arguments);
+	int (*ops_ptr)(va_list arguments);
 	va_list arguments;
 
 	va_start(arguments, format);
-	while (format && format[i] != '\0')
+
+	if (format || format[i] == '\0')
+		return (-1);
+
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
-			ptr = get_op_func(format[i + 1]);
-			count += ptr(arguments);
+			ops_ptr = get_op_func(format[i + 1]);
+			count += ops_ptr(arguments);
 /* Incrementing by two to get passed format specifier */
 			i += 2;
 		}
